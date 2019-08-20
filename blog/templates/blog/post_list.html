@@ -1,16 +1,32 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Bullfrog</title>
+
+    {# styles #}
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{% static 'css/blog/blog.css' %}">
 </head>
 <body>
-    {% for post in posts %}
-        <div>
-            <p>published: {{ post.published_date }}</p>
-            <h2><a href="">{{ post.title }}</a></h2>
-            <p>{{ post.text|linebreaksbr }}</p>
+    <header class='page-header'>
+        <h1><a href="">Blog is short for Bullfrog</a></h1>
+    </header>
+    <main class='content container'>
+        {% for post in posts %}
+         <div class="row">
+            <div class="col-md-8">        
+                <div class='post'>
+                    <p>published: {{ post.published_date }}</p>
+                    <h2><a href="">{{ post.title }}</a></h2>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            </div>
         </div>
-    {% endfor %}
+        {% endfor %}
+    </main>
 </body>
 </html>
