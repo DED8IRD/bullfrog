@@ -5,7 +5,7 @@
         <div class="col-md-8">        
             <div class='post'>
                 <p>published: {{ post.published_date }}</p>
-                <h2><a href="">{{ post.title }}</a></h2>
+                <h2><a href="{% url 'blog:post_detail' pk=post.pk %}">{{ post.title }}</a></h2>
                 <p>{{ post.text|linebreaksbr }}</p>
             </div>
         </div>
