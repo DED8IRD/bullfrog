@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bullfrog | {% block title %}Home{% endblock title %}</title>
+
+    {# styles #}
+    {% block base_styles %}
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="{% static 'css/blog/blog.css' %}">
+    {% endblock base_styles %}
+    {% block extra_styles %}{% endblock extra_styles %}
+</head>
+<body>
+    <header class='page-header'>
+        <h1><a href="">Blog is short for Bullfrog</a></h1>
+    </header>
+    <main class='content container'>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    {% block scripts %}{% endblock scripts %}
+</body>
+</html>
