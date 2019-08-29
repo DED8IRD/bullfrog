@@ -131,3 +131,7 @@ STATICFILES_DIRS = (
 
 # Allowed hosts
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.pythonanywhere.com']
+
+# LOGIN/LOGOUT REDIRECTS
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

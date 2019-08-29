@@ -22,6 +22,10 @@
                     <a @click='adding = !adding' class="top-menu">
                         <span class="glyphicon glyphicon-plus"></span>
                     </a>
+                    <a href="{% url 'logout' %}" class="top-menu">Log out</a>
+                {% else %}
+                    <a href="{% url 'login' %}" class="top-menu">Log in</a>
+                    <a href="{% url 'signup' %}" class="top-menu">Sign up</a>
                 {% endif %}
             </h1>
         </header>        
