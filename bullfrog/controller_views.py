@@ -18,8 +18,8 @@ def signup(request):
                 user.groups.add(group)
                 login(request, user)
             return redirect('vue:index')
-
-    form = UserCreationForm()
+    else:
+        form = UserCreationForm()
     return render(request, 'registration/signup.html', {'form': form})
 
 
